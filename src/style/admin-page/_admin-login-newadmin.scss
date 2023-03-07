@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+
+$iconSize: 1rem;
+
+@mixin margin-lr-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin margin-tb-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@mixin icon-standard {
+  height: $iconSize;
+  width: $iconSize;
+}
+
+.login-card {
+  background-color: white;
+  width: 30vw;
+  margin-top: 10vh;
+  @include margin-lr-auto;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px gray;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+
+  .login-text {
+    font-size: 1.25rem;
+  }
+
+  form {
+    margin-top: 2rem;
+  }
+
+  .label-input-pair {
+    text-align: left;
+    width: fit-content;
+    margin-top: 1.5rem;
+    @include margin-lr-auto;
+
+    .login-labels {
+      display: block;
+      font-size: 1rem;
+    }
+
+    .login-textbox {
+      font-size: 1rem;
+      height: 1.75rem;
+      width: 25vw;
+      margin-top: 0.75rem;
+      text-indent: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px gray;
+    }
+  }
+
+  .login-buttons {
+    margin-top: 3rem;
+    text-align: center;
+
+    button {
+      background-color: #07abf1;
+      height: 3rem;
+      border: none;
+      border-radius: 10px;
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+      padding: 1rem;
+
+      &:hover {
+        background-color: lighten(#07abf1, 10%);
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: darken(#07abf1, 10%);
+      }
+    }
+
+    span {
+      vertical-align: middle;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .button-text {
+      padding-left: 0.2rem;
+      font-family: "Inter", sans-serif;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .login-card {
+    width: 50vw;
+  }
+
+  .login-textbox {
+    width: 50vw !important;
+  }
+
+  .login-buttons {
+    button {
+      height: 2.5rem !important;
+      padding: 0.5rem !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    span {
+      font-size: 0.95rem !important;
+    }
+  }
+}

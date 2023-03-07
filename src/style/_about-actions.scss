@@ -1,0 +1,79 @@
+$mainFonts: "Inter", sans-serif;
+$highlightColor: #07abf1;
+$saveColor: #0b8908;
+$formBgColor: #fafafa;
+
+#new-usc-officer-screen,
+#edit-usc-officer-screen {
+  display: none;
+  .form-container {
+    .form-content {
+      display: flex;
+
+      .left-col {
+        .officer-details {
+          padding: 10px;
+          input {
+            width: 500px;
+            margin-top: 0.5em;
+            margin-bottom: 1.25em;
+          }
+        }
+      }
+
+      .right-col {
+        padding: 10px;
+        #new-officer-image,
+        #edit-officer-image {
+          margin-top: 1em;
+          box-shadow: none;
+        }
+
+        #new-officer-image-preview,
+        #edit-officer-image-preview {
+          width: 250px;
+          height: 250px;
+          border: 2px dashed gray;
+          border-radius: 5px;
+          margin-bottom: 0.75em;
+        }
+
+        .action-buttons {
+          justify-content: flex-start;
+          #reset-uscofficer,
+          #upload-uscofficer {
+            margin-right: 1em;
+          }
+
+          #upload-uscofficer {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+#edit-usc-officer-screen {
+  .form-container {
+    .form-content {
+      .right-col {
+        .action-buttons {
+          button {
+            display: flex;
+            align-items: center;
+
+            #upload-article-icon {
+              font-size: 1.5em;
+              padding-right: 0.25rem;
+            }
+          }
+          #save-uscofficer {
+            background-color: $saveColor;
+          }
+        }
+      }
+    }
+  }
+}

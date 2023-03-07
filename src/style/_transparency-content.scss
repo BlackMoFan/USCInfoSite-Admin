@@ -1,0 +1,122 @@
+$mainFonts: "Inter", sans-serif;
+$borderColor: rgb(197, 197, 197);
+$highlightColor: #07abf1;
+$formBgColor: #fafafa;
+
+.list-and-button-container {
+  display: flex;
+
+  #list-container {
+    flex: 10;
+    background-color: white;
+    border-radius: 8px;
+    margin-left: 7vw;
+    display: flex;
+    flex-direction: column;
+    font-family: $mainFonts;
+    height: 100vh;
+
+    .list-header {
+      display: inline-flex;
+      font-size: 0.9em;
+
+      .list-header-name {
+        flex: 6;
+        padding: 0.75em;
+        padding-left: 3em;
+      }
+
+      .list-header-created {
+        flex: 3;
+        padding: 0.75em;
+        padding-left: 2.5em;
+        border-left: 1px solid $borderColor;
+        border-right: 1px solid $borderColor;
+      }
+
+      .list-header-empty {
+        flex: 1;
+        padding: 0.75em;
+        padding-left: 0.5em;
+      }
+    }
+
+    .list-items {
+      ul {
+        list-style-type: none;
+        padding-left: 1em;
+
+        li {
+          font-size: 0.95em;
+          padding-top: 0.25em;
+          padding-bottom: 0.25em;
+          display: flex;
+          align-items: center;
+
+          .list-item-name {
+            flex: 6;
+            font-weight: 600;
+          }
+
+          .list-item-created {
+            flex: 3;
+            font-size: 0.9rem;
+          }
+
+          .list-item-options {
+            flex: 1;
+            text-align: center;
+
+            button {
+              background-color: white;
+              padding: 0.25em;
+              border: none;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+
+          &::before {
+            content: "▢";
+            font-size: 1.25em;
+            margin-right: 0.25em;
+          }
+        }
+      }
+    }
+
+    .empty-div {
+      flex: 2 1 auto;
+    }
+  }
+
+  .list-add-btn {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 3em;
+    }
+
+    button {
+      background-color: $highlightColor;
+      color: white;
+      border: none;
+      border-radius: 35px;
+      padding: 0.5em;
+
+      &:hover {
+        background-color: lighten($highlightColor, 5%);
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: darken($highlightColor, 5%);
+      }
+    }
+  }
+}

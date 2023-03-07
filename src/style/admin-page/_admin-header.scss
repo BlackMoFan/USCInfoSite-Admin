@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+
+$logoSize: 60px;
+$iconSize: 45px;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  height: auto;
+  width: fit-content;
+
+  img {
+    height: $logoSize;
+    width: $logoSize;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-flow: column;
+    margin-left: 0.5rem;
+    justify-content: center;
+
+    .scname {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.title-text {
+  position: absolute;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  left: 0;
+  right: 0;
+  top: 2.5rem;
+  margin: auto;
+}
+
+#person-icon {
+  height: $iconSize;
+  width: $iconSize;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 3vw;
+}
+
+@media only screen and (max-width: 1150px) {
+  .logo {
+    img {
+      height: $logoSize - 5px;
+      width: $logoSize - 5px;
+    }
+  }
+
+  .wvsuname {
+    font-size: 0.8rem;
+  }
+
+  .scname {
+    font-size: 1.1rem !important;
+  }
+
+  .title-text {
+    font-size: 1.5rem;
+  }
+
+  #person-icon {
+    height: $iconSize - 5px;
+    width: $iconSize - 5px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 1rem;
+  }
+
+  .logo {
+    img {
+      height: $logoSize - 10px;
+      width: $logoSize - 10px;
+    }
+  }
+
+  .logo-text {
+    visibility: hidden;
+  }
+
+  .title-text {
+    font-size: 1.1rem;
+    top: 2.15rem;
+  }
+
+  #person-icon {
+    height: $iconSize - 15px;
+    width: $iconSize - 15px;
+    margin-right: 4vw;
+  }
+}

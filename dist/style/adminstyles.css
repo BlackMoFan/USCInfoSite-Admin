@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  height: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.logo img {
+  height: 60px;
+  width: 60px;
+}
+.logo .logo-text {
+  display: flex;
+  flex-flow: column;
+  margin-left: 0.5rem;
+  justify-content: center;
+}
+.logo .logo-text .scname {
+  font-size: 1.4rem;
+}
+
+.title-text {
+  position: absolute;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  left: 0;
+  right: 0;
+  top: 2.5rem;
+  margin: auto;
+}
+
+#person-icon {
+  height: 45px;
+  width: 45px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 3vw;
+}
+
+@media only screen and (max-width: 1150px) {
+  .logo img {
+    height: 55px;
+    width: 55px;
+  }
+  .wvsuname {
+    font-size: 0.8rem;
+  }
+  .scname {
+    font-size: 1.1rem !important;
+  }
+  .title-text {
+    font-size: 1.5rem;
+  }
+  #person-icon {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 1rem;
+  }
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+  .logo-text {
+    visibility: hidden;
+  }
+  .title-text {
+    font-size: 1.1rem;
+    top: 2.15rem;
+  }
+  #person-icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 4vw;
+  }
+}
+.login-card {
+  background-color: white;
+  width: 30vw;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 4px gray;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+.login-card .login-text {
+  font-size: 1.25rem;
+}
+.login-card form {
+  margin-top: 2rem;
+}
+.login-card .label-input-pair {
+  text-align: left;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-card .label-input-pair .login-labels {
+  display: block;
+  font-size: 1rem;
+}
+.login-card .label-input-pair .login-textbox {
+  font-size: 1rem;
+  height: 1.75rem;
+  width: 25vw;
+  margin-top: 0.75rem;
+  text-indent: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px gray;
+}
+.login-card .login-buttons {
+  margin-top: 3rem;
+  text-align: center;
+}
+.login-card .login-buttons button {
+  background-color: #07abf1;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  padding: 1rem;
+}
+.login-card .login-buttons button:hover {
+  background-color: #32bdf9;
+  cursor: pointer;
+}
+.login-card .login-buttons button:active {
+  background-color: #0688bf;
+}
+.login-card .login-buttons span {
+  vertical-align: middle;
+  font-size: 1rem;
+  color: white;
+}
+.login-card .login-buttons .button-text {
+  padding-left: 0.2rem;
+  font-family: "Inter", sans-serif;
+}
+
+@media only screen and (max-width: 850px) {
+  .login-card {
+    width: 50vw;
+  }
+  .login-textbox {
+    width: 50vw !important;
+  }
+  .login-buttons button {
+    height: 2.5rem !important;
+    padding: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .login-buttons span {
+    font-size: 0.95rem !important;
+  }
+}
+body {
+  margin: 0px;
+  background-color: #f1f1f0;
+}/*# sourceMappingURL=adminstyles.css.map */

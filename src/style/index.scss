@@ -1,0 +1,13 @@
+@use "./main-header";
+@use "./main-content";
+@use "./main-actions";
+
+@use "./organizations-actions";
+
+@use "./transparency-content";
+@use "./transparency-actions";
+
+@use "./about-actions";
+body {
+  margin: 0px;
+}

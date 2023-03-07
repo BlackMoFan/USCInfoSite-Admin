@@ -1,0 +1,130 @@
+$mainFonts: "Inter", sans-serif;
+$highlightColor: #07abf1;
+$saveColor: #0b8908;
+$formBgColor: #fafafa;
+
+#new-file-form {
+  display: none;
+}
+
+#edit-file-form {
+  display: none;
+}
+
+#file-form-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 200px;
+  width: 40em;
+  z-index: 15;
+  background-color: $formBgColor;
+  font-family: $mainFonts;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    font-family: $mainFonts;
+    padding: 0.4em;
+    background-color: $highlightColor;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .file-form-header {
+    span {
+      float: right;
+      padding-right: 0.4rem;
+      padding-top: 0.4rem;
+      font-size: 2em;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .file-form-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .file-form-fileoptions {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      label {
+        margin-right: 1em;
+      }
+
+      input {
+        width: 30em;
+        padding: 0.25rem;
+        font-family: $mainFonts;
+        font-size: 0.9em;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px gray;
+      }
+
+      input[type="file"] {
+        margin-top: 0.25em;
+        width: 13em;
+        box-shadow: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      button {
+        margin-top: 0.5em;
+        display: flex;
+        align-items: center;
+
+        span {
+          font-size: 1.25rem;
+          padding-right: 0.25rem;
+        }
+      }
+    }
+
+    .file-form-fileactions {
+      display: flex;
+      padding: 20px;
+
+      #reset-file-form {
+        margin-right: 1em;
+      }
+
+      #upload-file-form {
+        span {
+          font-size: 1.25rem;
+          padding-right: 0.25rem;
+        }
+        display: flex;
+        align-items: center;
+      }
+
+      #save-file-form {
+        background-color: $saveColor;
+        span {
+          font-size: 1.25rem;
+          padding-right: 0.25rem;
+        }
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

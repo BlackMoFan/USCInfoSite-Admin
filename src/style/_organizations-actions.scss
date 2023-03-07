@@ -1,0 +1,454 @@
+$mainFonts: "Inter", sans-serif;
+$highlightColor: #07abf1;
+$saveColor: #0b8908;
+$formBgColor: #fafafa;
+
+#new-org-screen {
+  display: none;
+}
+
+#edit-org-screen {
+  display: none;
+}
+
+#org-form-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 640px;
+  width: 80em;
+  z-index: 15;
+  background-color: $formBgColor;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
+  .org-form-header {
+    span {
+      float: right;
+      padding-right: 0.4rem;
+      padding-top: 0.4rem;
+      font-size: 2em;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .org-form-content {
+    font-family: $mainFonts;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 0.35rem;
+      background-color: $highlightColor;
+      color: white;
+
+      &:hover {
+        background-color: lighten($highlightColor, 5%);
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: darken($highlightColor, 5%);
+      }
+    }
+
+    input,
+    textarea {
+      padding: 0.25rem;
+      font-family: $mainFonts;
+      font-size: 0.9em;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px gray;
+    }
+
+    .left-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .name-desc {
+        padding: 10px;
+
+        label {
+          margin-right: 1em;
+        }
+
+        input {
+          width: 490px;
+        }
+
+        .org-name-pair {
+          margin-bottom: 1em;
+        }
+
+        textarea {
+          margin-top: 1em;
+          width: 555px;
+          height: 350px;
+          resize: none;
+        }
+      }
+
+      .org-action-btns {
+        display: flex;
+
+        #reset-org,
+        #upload-org {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+          padding: 0.5rem;
+        }
+
+        #upload-org,
+        #save-org {
+          display: inline-flex;
+          align-items: center;
+
+          span {
+            font-size: 1.25rem;
+            padding-right: 0.25rem;
+          }
+        }
+
+        #save-org {
+          background-color: $saveColor;
+        }
+      }
+    }
+
+    .right-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      .org-images {
+        display: flex;
+
+        .image-items {
+          .add-image-btn {
+            display: inline-flex;
+            align-items: center;
+
+            .add-image-icon {
+              font-size: 1em;
+              padding-right: 0.25rem;
+            }
+          }
+        }
+
+        .org-logo-item {
+          flex: 1;
+
+          #org-logo {
+            box-shadow: none;
+          }
+
+          #org-logo-preview {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed gray;
+            border-radius: 5px;
+            margin-bottom: 0.75em;
+          }
+        }
+
+        .featured-item {
+          flex: 3;
+
+          #org-featured {
+            box-shadow: none;
+          }
+
+          #org-featured-preview {
+            width: 300px;
+            height: 200px;
+            border: 2px dashed gray;
+            border-radius: 5px;
+            margin-bottom: 0.75em;
+          }
+        }
+      }
+
+      .org-fields {
+        display: flex;
+
+        label,
+        input {
+          display: block;
+        }
+        input {
+          margin-top: 0.25em;
+        }
+        label {
+          margin-top: 1em;
+        }
+
+        .left-fields {
+          flex: 2;
+
+          input {
+            width: 300px;
+          }
+        }
+
+        .right-fields {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+.cover-screen {
+  background-color: black;
+  opacity: 35%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}
+
+#confirm-delete-org-screen {
+  display: none;
+}
+
+.confirm-delete-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 130px;
+  width: 400px;
+  z-index: 10;
+  background-color: white;
+  border-radius: 8px;
+  font-family: $mainFonts;
+
+  .confirm-delete-header {
+    padding: 0.5rem;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+
+    .red-text {
+      color: red;
+    }
+
+    span {
+      font-size: 0.5em;
+      padding-right: 0.5rem;
+      padding-top: 0.5rem;
+    }
+  }
+
+  .confirm-delete-content {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .confirm-delete-text {
+      font-size: 1.25em;
+      padding-bottom: 0.5rem;
+    }
+
+    .confirm-delete-btns {
+      margin-top: 0.5em;
+      display: flex;
+      justify-content: flex-start;
+
+      button {
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem;
+        background-color: $highlightColor;
+        color: white;
+        margin-right: 0.5em;
+
+        &:hover {
+          background-color: lighten($highlightColor, 5%);
+          cursor: pointer;
+        }
+
+        &:active {
+          background-color: darken($highlightColor, 5%);
+        }
+      }
+
+      #confirm-delete-org {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+#success-delete-org-screen {
+  display: none;
+}
+
+.success-delete-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 130px;
+  width: 400px;
+  z-index: 10;
+  background-color: white;
+  border-radius: 8px;
+  font-family: $mainFonts;
+
+  .success-delete-header {
+    padding: 0.5rem;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+
+    .green-text {
+      color: green;
+    }
+
+    span {
+      font-size: 1.25em;
+      padding-right: 0.5rem;
+      padding-top: 0.5rem;
+    }
+  }
+
+  .success-delete-content {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      text-align: center;
+    }
+
+    .success-delete {
+      margin-top: 0.5em;
+      border: none;
+      border-radius: 10px;
+      padding: 0.5rem;
+      background-color: $highlightColor;
+      color: white;
+      margin-right: 0.5em;
+      width: 5em;
+
+      &:hover {
+        background-color: lighten($highlightColor, 5%);
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: darken($highlightColor, 5%);
+      }
+
+      #success-delete-org {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+#success-save-org-screen {
+  display: none;
+}
+
+.success-save-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 130px;
+  width: 400px;
+  z-index: 10;
+  background-color: white;
+  border-radius: 8px;
+  font-family: $mainFonts;
+
+  .success-save-header {
+    padding: 0.5rem;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+
+    .green-text {
+      color: green;
+    }
+
+    span {
+      font-size: 1.25em;
+      padding-right: 0.5rem;
+      padding-top: 0.5rem;
+    }
+  }
+
+  .success-save-content {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      text-align: center;
+    }
+
+    .success-save {
+      margin-top: 0.5em;
+      border: none;
+      border-radius: 10px;
+      padding: 0.5rem;
+      background-color: $highlightColor;
+      color: white;
+      margin-right: 0.5em;
+      width: 5em;
+
+      &:hover {
+        background-color: lighten($highlightColor, 5%);
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: darken($highlightColor, 5%);
+      }
+
+      #success-save-org {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
